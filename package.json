@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
+      "prestart": "node buildScripts/startMessage",
+      "start": "npm-run-all --parallel nsp-check run-server",
+      "run-server": "node buildScripts/srcServer.js",
+      "nsp-check": "nsp check",
+      "localtunnel": "lt --port 3000 --subdomain vitaliy",
+      "share": "npm-run-all --parallel run-server localtunnel"
   },
   "author": "Vitali Krushinsky",
   "license": "MIT",
