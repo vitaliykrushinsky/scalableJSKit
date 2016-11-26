@@ -4,13 +4,15 @@
   "description": "JavaScript development environment",
   "scripts": {
       "prestart": "babel-node buildScripts/startMessage",
-      "start": "npm-run-all --parallel nsp-check server lint-w",
+      "start": "npm-run-all --parallel nsp-check server lint-w test-w",
       "server": "babel-node buildScripts/srcServer.js",
       "nsp-check": "nsp check",
       "localtunnel": "lt --port 3000 --subdomain vitaliy",
       "share": "npm-run-all --parallel server localtunnel",
       "lint": "esw webpack.config.*, src, buildScripts --color",
-      "lint-w": "npm run lint -- --watch"
+      "lint-w": "npm run lint -- --watch",
+      "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+      "test-w": "npm run test -- --watch"
   },
   "author": "Vitali Krushinsky",
   "license": "MIT",
