@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!--Only Send Polyfill to Those Who Need It, see "fetch" -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
 </head>
 <body>
     <h1>Users</h1>
+  <table>
+    <thead>
+      <th>&nbsp;</th>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </thead>
+    <tbody id="users">
+
+    </tbody>
+  </table>
     <script src="bundle.js"></script>
-    <table>
-        <thead>
-            <th>&nbsp;</th>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Email</th>
-            <th>Phone</th>
-        </thead>
-        <tbody id="users">
-            
-        </tbody>
-    </table>
 </body>
 </html>
