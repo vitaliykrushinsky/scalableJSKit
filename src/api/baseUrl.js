@@ -2,7 +2,8 @@ export default function getBaseUrl() {
     // const inDevelopment = window.location.hostname === 'localhost';
     // return inDevelopment ? 'http://localhost:3001/' : '/';
 
-    return getQueryStringParameterByName('mockapi') ? 'http://localhost:3001/' : '/';
+    // return getQueryStringParameterByName('mockapi') ? 'http://localhost:3001/' : '/'; // local API
+    return getQueryStringParameterByName('mockapi') ? 'http://localhost:3001/' : 'https://whispering-sands-31681.herokuapp.com/'; // API hosted on Heroku
 }
 
 function getQueryStringParameterByName(name, url) {

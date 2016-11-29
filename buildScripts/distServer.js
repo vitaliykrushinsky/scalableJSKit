@@ -15,13 +15,14 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.get('/users', function (req, res) {
-    res.json([
-        {"id": 1,"firstName":"John","lastName":"Doe","email":"bob@gmail.com"},
-        {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
-        {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
-    ])
-});
+// local API
+// app.get('/users', function (req, res) {
+//     res.json([
+//         {"id": 1,"firstName":"John","lastName":"Doe","email":"bob@gmail.com"},
+//         {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
+//         {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
+//     ])
+// });
 
 app.listen(port, (err) => {
     if (err) {
